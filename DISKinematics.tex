@@ -1,0 +1,273 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{Deep Inelastic Scattering Kinematics}
+
+\subsection{Conventions and Basic Relations}
+
+We choose the direction of the hadron beam as the $+z$ direction, with
+the lepton beam traveling in the opposite direction. The initial
+hadron and electron energies are $E_{\rm h}$ and $E_{\ell}$,
+respectively. The scattering angle of the lepton is denoted by
+$\theta$ ($\theta = \pi$ for the initial lepton direction), and the angle
+of the final state hadronic system is denoted by $\gamma$ ($\gamma=0$
+for the initial hadron direction).
+We denote the momentum four-vectors of the initial
+lepton and the  inital hadron as $k$ and $P$, respectively, and the
+scattered four-momenta as $k'$ and $P'$. The final state energies of
+the lepton and hadronic system are denote $E^\prime_\ell$ and
+$E^\prime_{  rm h}$, respectively.
+
+
+The squared center-of-mass energy, ${s}$, is given by:
+%
+\begin{equation}
+s = 4E_{\ell}E_{\rm h}
+%
+\end{equation}
+
+The negative squared four-momentum transferred in deep inelastic
+scattering (DIS) between the lepton and hadron is
+%
+\begin{equation}
+Q^2 \equiv - q^2 = -(k - k')^2  = s x y
+\label{eq:q2xy}
+\end{equation}
+%
+where $x$ is the Bjorken scaling variable and $y$ is the
+fractional energy transfer from the lepton, defined as:
+%
+\begin{equation}
+  x = {Q^2 \over 2 P\cdot q} 
+\end{equation}
+\begin{equation}
+  y = {P\cdot q \over P\cdot k}
+\end{equation}
+%
+
+
+\subsection{Lepton Variables}
+
+The DIS variables using the scattered lepton variables are given by:
+%
+\begin{equation}
+Q^2 = 2 E_\ell E^\prime_\ell\, (1+ \cos \theta)
+\label{eq:Q2e}
+\end{equation}
+\begin{equation}
+y = 1 - {E^\prime_\ell \over 2 E_\ell} \, (1-\cos\theta)
+\label{eq:ye}
+\end{equation}
+%
+The variable $x$ can be found from Eq.(\ref{eq:q2xy}).
+
+An expression for $Q^2$ as a function of $x$ based on the scattered
+lepton energy $E^\prime_\ell$ can be found by solving for $\cos\theta$
+in Eq.(\ref{eq:Q2e}) and plugging into Eq.(\ref{eq:ye}), then using
+Eq.(\ref{eq:q2xy}):
+%
+\begin{equation}
+Q^2 = {1- E^\prime_\ell/E_\ell \over {1\over s x} - {1 \over 4E_\ell^2} } 
+\label{eq:q2eep}
+\end{equation}
+%
+Likewise, an expression for $Q^2$ as a function of $x$ based on the
+scattered lepton angle $\theta$ can be found by solving for $E^\prime_\ell$ in
+Eq.(\ref{eq:Q2e}) and plugging into plugging into Eq.(\ref{eq:ye}), then using
+Eq.(\ref{eq:q2xy}):
+%
+\begin{equation}
+Q^2 = {s \over {1\over x} + {E_{\rm h} \over E_\ell}({1-\cos\theta
+    \over 1+\cos\theta}) } =
+{sx \over {1} + x\,{E_{\rm h} \over E_\ell}\,\tan^2({\theta \over 2})} 
+\label{eq:q2etheta}
+\end{equation}
+
+We can invert Eq.~(\ref{eq:q2eep}) to find $E^\prime_\ell$ in terms of $Q^2$ and $x$:
+%
+\begin{equation}
+E^\prime_\ell  = E_\ell\, \bigg[ 1 - {Q^2 \over 4 E_\ell}\bigg({1 \over x E_{\rm h}} - {1\over E_\ell} \bigg)\bigg]
+\label{eq:ep}
+\end{equation}
+%
+and also invert Eq.~(\ref{eq:q2etheta}) to obtain $\theta$ (or $\eta$) in terms of $Q^2$ and $x$:
+%
+\begin{equation}
+e^{-\eta} = \tan {\theta \over 2}   = \sqrt{ {4 E_\ell^2 \over Q^2} - {E_\ell \over x E_{\rm h}}}
+\label{eq:theta}
+\end{equation}
+%
+When the second term in the radical is negligible (for all but the smallest $x$ values), the scattered lepton angle depends only on $Q^2$:
+
+\begin{equation}
+\eta \approx -\ln \bigg( {2 E_\ell \over \sqrt{Q^2}} \bigg)
+\end{equation}
+%
+
+
+\subsection{Hadron variables}
+
+The DIS variables using the scattered hadronic variables are given by:
+%
+\begin{equation}
+Q^2 = {E^{\prime 2}_{\rm h} \sin^2\gamma \over 1-y}
+\label{eq:Q2h}
+\end{equation}
+\begin{equation}
+y = {E^\prime_{\rm h} \over 2 E_\ell} \, (1-\cos\gamma)
+\label{eq:yh}
+\end{equation}
+%
+These variables
+can be found from the measured hadronic energy flow via the Jacquet-Blondel
+method:
+%
+\begin{equation}
+Q^2 = {(\sum_i p_{{\rm T},i})^2 \over 1-y}
+  \label{eq:jbmethq}
+\end{equation}
+\begin{equation}
+y = {\sum_i (E_{{\rm h},i}-p_{z,i}) \over 2 E_\ell}
+  \label{eq:jbmethy}
+\end{equation}
+%
+In other words,
+%
+\begin{equation}
+  \sin\gamma = {\sum_i p_{{\rm T},i} \over E^\prime_{\rm h}}
+  \end{equation} 
+%
+
+The variable $x$ can be found from Eq.(\ref{eq:q2xy}). 
+
+An expression for $Q^2$ as a function of $x$ based on the scattered
+hadron energy $E^\prime_{\rm h}$ can be found by solving for $\cos\gamma$
+in Eq.(\ref{eq:yh}) and plugging into Eq.(\ref{eq:Q2h}), expanding out
+$\sin^2\gamma = (1+\cos\gamma)(1-\cos\gamma)$,
+then using
+Eq.(\ref{eq:q2xy}):
+%
+\begin{equation}
+  Q^2 = {sx\,(1-{E^\prime_{\rm h} \over x\,E_{\rm h}}) \over 
+      (1-{E_\ell \over x\,E_{\rm h}})}
+\label{eq:q2hp}
+\end{equation}
+%
+Likewise, an expression for $Q^2$ as a function of $x$ based on the
+scattered hadronic angle $\gamma$ can be found by solving for $E^\prime_{\rm h}$ in
+Eq.(\ref{eq:yh}) and plugging into plugging into Eq.(\ref{eq:Q2h}), then using
+Eq.(\ref{eq:q2xy}):
+%
+\begin{equation}
+Q^2 = {sx \over {1 + {4E^2_\ell \over sx} }{(1+\cos\gamma)
+    \over (1-\cos\gamma) } } = {sx \over {1 + {E_\ell \over x\, E_{\rm h}} \cot^2({\gamma \over 2}) } }
+\label{eq:q2hgamma}
+\end{equation}
+
+We can invert Eq.~(\ref{eq:q2hp}) to find $E^\prime_{\rm h}$ in terms of $Q^2$ and $x$:
+%
+\begin{equation}
+E^\prime_{\rm h}  = xE_{\rm h} + {Q^2 \over 4 E_\ell}\bigg({E_\ell \over x E_{\rm h}} - 1 \bigg)
+\label{eq:hp}
+\end{equation}
+%
+and also invert Eq.~(\ref{eq:q2hgamma}) to obtain $\gamma$ (or $\eta$) in terms of $Q^2$ and $x$:
+%
+\begin{equation}
+e^{-\eta} = \tan {\gamma \over 2}   = { 1 \over \sqrt{{4E_{\rm h}^2 x^2 \over Q^2} - x {E_{\rm h} \over E_\ell} }  }  
+\label{eq:gamma}
+\end{equation}
+%
+
+\subsection{Kinematic Resolutions}
+
+\subsubsection{$Q^2$, Lepton Variables}
+
+In the far backward region, $\theta \approx \pi$, we can express the relation for $Q^2$ in terms of the lepton angle from the $-z$ axis, where $\alpha = \pi - \theta$:
+%
+\begin{equation}
+Q^2 = 2 E_\ell E^\prime_\ell\, (1- \cos \alpha)
+\label{eq:Q2alpha}
+\end{equation}
+%
+From this relation, the relative resolution on $Q^2$ in terms of the relative resolution on the measured scattered lepton energy $E^\prime$, assuming negligible uncertainty on the scattered angle, is given by:
+%
+\begin{equation}
+  {dQ^2 \over Q^2} = {dE^\prime_{\ell} \over E^\prime_{\ell}}
+\label{eq:dQ2Elep}
+\end{equation}
+%
+The dependence of the relative uncertainty on $Q^2$ on the uncertainty of the measured scattering angle for small $\alpha$ ($\theta$ near $\pi$) can be found from $\cos\alpha \approx 1-\alpha^2/2$, such that:
+%
+\begin{equation}
+Q^2 \approx E\,E^\prime_{\ell}\, \alpha^2
+\end{equation}
+This implies:
+%
+\begin{equation}
+  {dQ^2 \over Q^2} = 2{d\alpha \over \alpha}
+\label{eq:dQ2alpha}
+\end{equation}
+%
+
+\subsubsection{$y$, Lepton Variables}
+
+We can express the relation for $y$ in terms of the lepton angle from the $-z$ axis, where $\alpha = \pi - \theta$:
+%
+\begin{equation}
+y = 1 - {E^\prime_\ell \over 2 E_\ell} \, (1+\cos\alpha)
+\label{eq:Yalpha}
+\end{equation}
+%
+We can then express the relative uncertainty on $(1-y)$ in terms of the relative resolution on the measured scattered lepton energy $E^\prime$ as:
+%
+\begin{equation}
+{d(1-y) \over 1-y} = {dE^\prime_{\ell} \over E^\prime_{\ell}}
+\end{equation}
+%
+Or put another way:
+%
+\begin{equation}
+dy = {dE^\prime_{\ell} \over E^\prime_{\ell}}(1-y)
+\end{equation}
+%
+This implies that the reconstruction of $y$ from the scattered lepton energy is good for large $y$, but degrades and reaches 100\% uncertainty for $y \approx dE^\prime_{\ell}/E^\prime_{\ell}$. 
+
+For the dependence of the uncertainty on $1-y$ from the uncertainty on the measured scattering angle $\alpha$  we get:
+%
+\begin{equation}
+{d(1-y) \over 1-y} \approx {\alpha\, d\alpha \over (2-\alpha^2/2)} \approx {1 \over 2} \alpha\, d\alpha 
+\end{equation}
+%
+
+
+\subsubsection{$y$, Hadron Variables}
+
+From Eq.(\ref{eq:yh}) we can then express the relative uncertainty on $y$ in terms of the relative resolution on the measured scattered hadron energy $E^\prime_{\rm h}$ as:
+%
+\begin{equation}
+{dy \over y} = {dE^\prime_{\rm h} \over E^\prime_{\rm h}}
+\end{equation}
+%
+For small angles from the far backward region, $\gamma \approx \pi$, we can express the relation for $y$ in terms of the hadron angle from the $-z$ axis, where $\beta = \pi - \gamma$:
+%
+\begin{equation}
+y = {E^\prime_{\rm h} \over 2 E_\ell} \, (1+\cos\beta) \approx {E^\prime_{\rm h} \over 2 E_\ell} \, (2-\beta^2/2)
+\end{equation}
+%
+The dependence of the relative uncertainty on $y$ on the uncertainty of the measured scattering angle for small $\beta$ is therefore:
+%
+\begin{equation}
+{dy \over y} = {\beta\, d\beta \over (2-\beta^2/2)}
+\end{equation}
+%
+
+%
+
+
+\end{document}
+
+
