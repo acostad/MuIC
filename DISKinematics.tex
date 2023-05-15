@@ -19,7 +19,7 @@ We denote the momentum four-vectors of the initial
 lepton and the  inital hadron as $k$ and $P$, respectively, and the
 scattered four-momenta as $k'$ and $P'$. The final state energies of
 the lepton and hadronic system are denote $E^\prime_\ell$ and
-$E^\prime_{  rm h}$, respectively.
+$E^\prime_{\rm h}$, respectively.
 
 
 The squared center-of-mass energy, ${s}$, is given by:
@@ -86,6 +86,8 @@ Q^2 = {s \over {1\over x} + {E_{\rm h} \over E_\ell}({1-\cos\theta
 \label{eq:q2etheta}
 \end{equation}
 
+Graphs showing the dependence of $Q^2$ vs. $x$ for various choices of the scattered lepton energy and pseudorapidity are shown in the left plots of Figs.~\ref{fig:MuICkinematics}, \ref{fig:MuIC2kinematics}, and \ref{fig:LHmuCkinematics} for different machine configurations. 
+
 We can invert Eq.~(\ref{eq:q2eep}) to find $E^\prime_\ell$ in terms of $Q^2$ and $x$:
 %
 \begin{equation}
@@ -106,6 +108,7 @@ When the second term in the radical is negligible (for all but the smallest $x$ 
 \eta \approx -\ln \bigg( {2 E_\ell \over \sqrt{Q^2}} \bigg)
 \end{equation}
 %
+
 
 
 \subsection{Hadron variables}
@@ -167,6 +170,10 @@ Q^2 = {sx \over {1 + {4E^2_\ell \over sx} }{(1+\cos\gamma)
 \label{eq:q2hgamma}
 \end{equation}
 
+Graphs showing the dependence of $Q^2$ vs. $x$ for various choices of the scattered hadron energy and pseudorapidity are shown in the right plots of Figs.~\ref{fig:MuICkinematics}, \ref{fig:MuIC2kinematics}, and \ref{fig:LHmuCkinematics} for different machine configurations. 
+
+
+
 We can invert Eq.~(\ref{eq:q2hp}) to find $E^\prime_{\rm h}$ in terms of $Q^2$ and $x$:
 %
 \begin{equation}
@@ -174,13 +181,68 @@ E^\prime_{\rm h}  = xE_{\rm h} + {Q^2 \over 4 E_\ell}\bigg({E_\ell \over x E_{\r
 \label{eq:hp}
 \end{equation}
 %
-and also invert Eq.~(\ref{eq:q2hgamma}) to obtain $\gamma$ (or $\eta$) in terms of $Q^2$ and $x$:
+which for $x \ll E_\ell/E_{\rm h}$ is approximated by:
+%
+\begin{equation}
+E^\prime_{\rm h}  = yE_\ell 
+\end{equation}
+%
+We can also invert Eq.~(\ref{eq:q2hgamma}) to obtain $\gamma$ (or $\eta$) in terms of $Q^2$ and $x$:
 %
 \begin{equation}
 e^{-\eta} = \tan {\gamma \over 2}   = { 1 \over \sqrt{{4E_{\rm h}^2 x^2 \over Q^2} - x {E_{\rm h} \over E_\ell} }  }  
 \label{eq:gamma}
 \end{equation}
 %
+which again for $x \ll E_\ell/E_{\rm h}$ can approximated by:
+%
+\begin{equation}
+\eta \approx -\ln \bigg( {\sqrt{Q^2} \over 2 E_{\rm h}\, x } \bigg)
+\end{equation}
+%
+
+\subsubsection{$\Sigma$ and $T$ variables}
+
+A variation of the hadron method is to define the $\Sigma$ and $T$
+variables:
+
+\begin{equation}
+\Sigma = \sum_i (E_{{\rm h},i}-p_{z,i}) =  2 E_\ell\; y
+  \label{eq:sigma}
+\end{equation}
+%
+\begin{equation}
+T = \sqrt{  \big(\sum_i p_{x,i})^2 + (\sum_i p_{y,i} \big)^2  } = E^\prime_{\rm h} \sin\gamma
+  \label{eq:T}
+\end{equation}
+%
+which again are sums over the  hadron energies and momenta. The
+variable $T$ is essentially the transverse momentum ($p_{\rm T}$) of
+the hadron system (i.e. jet from the struck parton). From these definitions
+we can find $Q^2$ vs. $x$ in terms of $\Sigma$ and $T$:
+%
+\begin{equation}
+Q^2 = 2 E_{\rm h} \, x\, \Sigma
+  \label{eq:Q2Sigma}
+\end{equation}
+%
+and using the quadratic equation:
+%
+\begin{equation}
+Q^2 = {s x \over 2} \bigg(1 \pm \sqrt{1-{4T^2\over sx}}  \bigg)
+  \label{eq:Q2T}
+\end{equation}
+%
+Graphs showing the dependence of $Q^2$ vs. $x$ for various choices of
+$\Sigma$ and $T$ are shown in Fig.~\ref{fig:MuICQ2SigmaT}.
+Since it can be shown that:
+%
+\begin{equation}
+T^2 =  (1-y)\,Q^2 
+\end{equation}
+%
+$T \approx Q$ for small $y$.
+
 
 \subsection{Kinematic Resolutions}
 
@@ -266,6 +328,41 @@ The dependence of the relative uncertainty on $y$ on the uncertainty of the meas
 %
 
 %
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.43\textwidth]{MuIC-lepton.png}
+    \includegraphics[width=0.45\textwidth]{MuIC-hadron.png}
+    \caption{Kinematics of the scattered muon (left) and final-state hadrons (right) in the $Q^2$-$x$ plane for muon-proton deep inelastic scattering with a 1000~GeV muon beam colliding with a 275~GeV proton beam. The dashed blue lines correspond to constant  energy in GeV and the dashed red lines to constant pseudorapidity, respectively. The lower diagonal solid line corresponds to the inelasticity $y=0.01$.}
+    \label{fig:MuICkinematics}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.43\textwidth]{MuIC2-lepton.png}
+    \includegraphics[width=0.45\textwidth]{MuIC2-hadron.png}
+    \caption{Kinematics of the scattered muon (left) and final-state hadrons (right) in the $Q^2$-$x$ plane for muon-proton deep inelastic scattering with a 1000~GeV muon beam colliding with a 1000~GeV proton beam. The dashed blue lines correspond to constant  energy in GeV and the dashed red lines to constant pseudorapidity, respectively. The lower diagonal solid line corresponds to the inelasticity $y=0.01$.}
+    \label{fig:MuIC2kinematics}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.43\textwidth]{LHmuC-lepton.png}
+    \includegraphics[width=0.45\textwidth]{LHmuC-hadron.png}
+    \caption{Kinematics of the scattered muon (left) and final-state hadrons (right) in the $Q^2$-$x$ plane for muon-proton deep inelastic scattering with a 1500~GeV muon beam colliding with a 7000~GeV proton beam. The dashed blue lines correspond to constant  energy in GeV and the dashed red lines to constant pseudorapidity, respectively. The lower diagonal solid line corresponds to the inelasticity $y=0.01$.}
+    \label{fig:LHmuCkinematics}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.43\textwidth]{MuIC-Sigma.png}
+    \includegraphics[width=0.45\textwidth]{MuIC-T.png}
+    \caption{$\Sigma$ (left)  and $T$ (right) in the $Q^2$-$x$ plane
+      for muon-proton deep inelastic scattering with a 1000~GeV muon
+      beam colliding with a 275~GeV proton beam.}
+      \label{fig:MuICQ2SigmaT}
+\end{figure}
+
 
 
 \end{document}
