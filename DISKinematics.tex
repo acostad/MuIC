@@ -241,7 +241,74 @@ Since it can be shown that:
 T^2 =  (1-y)\,Q^2 
 \end{equation}
 %
-$T \approx Q$ for small $y$.
+$T \approx Q$ for small $y$, where $T$ is also the transverse momentum
+of the scattered hadron system.
+
+\subsection{Double Angle Method}
+
+Assuming no initial state radiation or other unaccounted energy
+loss in the measured final state products, only two independent
+measurements are necessary to determine the kinematic variables $Q^2$,
+$y$, and $x$ (that can be obtained from $Q^2 = s x y$). These can come
+from lepton-only measurements or hadron-only measurements, as above,
+but also mixed methods. Here we discuss the ``double angle'' method
+that uses the scattered lepton ($\theta$)  and hadron ($\gamma$)
+angles. 
+
+By eliminating the scattered lepton and hadron energies in the
+formulae given earlier, it can be shown that:
+%
+\begin{equation}
+  Q^2 = 4 E_\ell^2\; {\sin\gamma\; (1+\cos\theta) \over
+    \sin\gamma + \sin\theta -\sin (\gamma + \theta)}
+\label{eq:DAQ2}
+\end{equation}
+%
+\begin{equation}
+  y = {\sin\theta\; (1-\cos\gamma) \over
+    \sin\gamma + \sin\theta -\sin (\gamma + \theta)}
+\label{eq:DAY}
+\end{equation}
+%
+
+\subsection{Kinematic Constraints}
+
+Energy and momentum are always conserved. For collider experiments,
+since the beam particles collide along the longitudinal ($z$) axis, this
+means the vector sum of the transverse momentum of all final state
+particles must be zero.
+%
+\begin{equation}
+\sum_i p_{x,i} = \sum_i p_{y,i} = 0
+\label{eq:ptsum}
+\end{equation}
+%
+Any measured imbalance is attributed to
+undetected neutrinos or detector resolution/mismeasurement effects. 
+
+Another useful constraint for lepton-hadron collisions applies in the
+longitudinal direction:
+%
+\begin{equation}
+\sum_i E_{i} - p_{z,i} = 2\,E_{\ell}
+\label{eq:ptsum}
+\end{equation}
+%
+where the hadron beam direction is again defined to be the $+z$
+direction, such that $E-p_z$ is 0 for the incoming hadon beam and
+$2E_\ell$ for the incoming lepton beam.  This constraint can be used
+to improve the resolution of the DIS quantities. For example, for
+leptons scattering at very small angles with respect to the incident
+direction (e.g. $\eta < -3$), the scattered lepton $E-p_z\approx
+0$. This can be used to solve for the final state lepton energy using
+this relation and the hadron measurements:
+%
+\begin{equation}
+E^\prime_\ell \approx {1\over 2}(2 E_\ell - \Sigma)
+\label{eq:leptonenergy}
+\end{equation}
+%
+
 
 
 \subsection{Kinematic Resolutions}
